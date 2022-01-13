@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Switch, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
@@ -17,7 +17,7 @@ class App extends Component {
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to={"/courses"} className="nav-link">
+              <Link to={"/"} className="nav-link">
                 Courses
               </Link>
             </li>
@@ -30,11 +30,11 @@ class App extends Component {
         </nav>
 
         <div className="container mt-3">
-          <Switch>
-            <Route exact path={["/", "/courses"]} component={CourseList} />
-            <Route exact path="/add" component={AddCourse} />
-            <Route path="/courses/:id" component={Course} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<CourseList/>} />
+            <Route path="/add" element={<AddCourse/>} />
+            <Route path="/courses/:id" element={<Course/>} />
+          </Routes>
         </div>
         
       </div>
