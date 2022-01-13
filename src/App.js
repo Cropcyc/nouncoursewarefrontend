@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-success">
-          <a href="/courses" className="navbar-brand">
+          <a href="/" className="navbar-brand">
             NOUN Library
           </a>
           <div className="navbar-nav mr-auto">
@@ -27,7 +27,7 @@ class App extends Component {
               </Link>
             </li>
           </div>
-        </nav>
+        </nav> 
 
         <div className="container mt-3">
           <Routes>
